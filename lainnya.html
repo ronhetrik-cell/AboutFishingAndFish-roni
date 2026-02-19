@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fishing</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Josefin+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Tombol Hamburger (muncul di mobile) -->
+    <button class="hamburger" id="hamburgerBtn" aria-label="Buka menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Overlay backdrop -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <header id="sidebar">
+        <div class="logo"></div>
+
+        <div class="site-title">
+            <span class="title-main">Memancing</span>
+            <span class="title-sub">fishing · since 2024</span>
+        </div>
+
+        <div class="nav-divider"></div>
+
+        <nav class="atas">
+            <span class="nav-label">Menu</span>
+            <a href="index.html" class="active">🏠 Home</a>
+            <a href="about.html" class="active">👥 About</a>
+            <a href="lainnya.html" class="active">📋 Lainnya</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p class="tagline">"Tenang bersama<br>alam dan kail"</p>
+        </div>
+    </header>
+
+    <main class="konten">
+
+        <h1>INFORMASI LAINNYA</h1><br>
+        <h2>Disini saya akan memberikan informasi tambahan tentang memancing</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique corrupti quasi dolorum asperiores
+            corporis hic atque minus eligendi laborum et deserunt molestiae cupiditate mollitia harum exercitationem
+            autem quos fuga id expedita, obcaecati nostrum cumque illum. Optio, praesentium nesciunt eligendi a quis
+            suscipit eum ipsum enim totam laborum fugit quae consectetur ducimus soluta ad animi nam quod explicabo sit
+            quisquam pariatur, dolorum voluptas quasi? Facere molestiae omnis laborum laboriosam dignissimos nobis
+            deserunt dicta ratione adipisci optio sint perferendis possimus asperiores fugit dolores sapiente illum
+            numquam nesciunt, quod quos obcaecati delectus cumque! Laudantium magni esse officiis error porro, sint
+            aperiam minima ex vitae doloremque fugit illum veniam accusantium vel sit asperiores temporibus. Libero
+            inventore facilis pariatur eveniet aspernatur, nisi architecto est temporibus debitis harum enim consectetur
+            iusto? Voluptatum distinctio adipisci dicta temporibus corrupti libero perspiciatis aspernatur qui
+            laudantium magnam corporis nisi, eius alias expedita, sequi exercitationem suscipit consequatur quam harum
+            debitis repudiandae aut doloremque soluta assumenda. Amet dolores commodi deleniti, explicabo officia
+            nesciunt repellendus, harum sit, quaerat similique assumenda debitis obcaecati voluptatem? Velit quam odio
+            atque libero beatae sint veniam laborum soluta est vitae labore amet necessitatibus voluptates facere
+            asperiores quibusdam quidem cum culpa perspiciatis voluptate aliquid, nemo vel. Molestias, quo eius.</p>
+
+    </main>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const sidebar = document.getElementById('sidebar');
+        const navOverlay = document.getElementById('navOverlay');
+
+        hamburgerBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+            navOverlay.classList.toggle('open');
+        });
+
+        navOverlay.addEventListener('click', () => {
+            sidebar.classList.remove('open');
+            navOverlay.classList.remove('open');
+        });
+
+        sidebar.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                sidebar.classList.remove('open');
+                navOverlay.classList.remove('open');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
+
+
+<h1>About</h1>
+        <p>Disini saya akan melihatkan hasil mancing saya. bukannya apa-apa tapi saya mau ngasih motivasi untuk
+            orang-orang yang kurang sabar, kadang keberuntungan datang saat kesabaran kita sudah habis.</p><br>
+        <h2>1. Hasil mancing berkat sabar</h2>
+        <div class="hasil">
+            <article>
+                <div class="mpak">
+                    <h3>Hasilnya:</h3><br>
+                    <img src="images/ikan.jpeg" style="width:40%; height:180px;">
+                    <p>Ini adalah hasil mancing saya yang berkat kesabaran.
+                        saya merasa happy ketika mancing bukan karna ikannya banyak/besar-besar, tapi suasana di
+                        pemancingan itu, hampir tiap mancing saya katawa karna jokes bapak-bapak, ada aja di bercandain.
+                    </p>
+                </div><br>
+                <hr><br>
+                <div class="mpak">
+                    <h3>Hasilnya:</h3><br>
+                    <img src="images/ikan3.jpeg" style="width:20%; height:180px;">
+                    <p>Ikan ini saya dapat setelah menunggu lama dan sabar. karna saya menyaksikan ada bapak-bapak yang
+                        boncos setiap mancing tapi bapak itu selalu sabar dan pada akhirnya bapak itu mendapatkan ikan
+                        yang besar dan banyak.
+                        intinya saya lebih suka keluar mancing ketimbang di rumah main hp lebih  happy
+                        rasanya diluar, tapi itu hanya sementara...
+                    </p>
+                </div>
+            </article>
+        </div>

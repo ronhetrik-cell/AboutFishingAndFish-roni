@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fishing</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Josefin+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Tombol Hamburger (muncul di mobile) -->
+    <button class="hamburger" id="hamburgerBtn" aria-label="Buka menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Overlay backdrop -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <header id="sidebar">
+        <div class="logo"></div>
+
+        <div class="site-title">
+            <span class="title-main">Memancing</span>
+            <span class="title-sub">fishing · since 2024</span>
+        </div>
+
+        <div class="nav-divider"></div>
+
+        <nav class="atas">
+            <span class="nav-label">Menu</span>
+            <a href="index.html" class="active">🏠 Home</a>
+            <a href="about.html" class="active">👥 About</a>
+            <a href="lainnya.html" class="active">📋 Lainnya</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p class="tagline">"Tenang bersama<br>alam dan kail"</p>
+        </div>
+    </header>
+
+    <main class="konten">
+
+        <h1>Pengenalan memancing</h1><br>
+        <h2>1. Tentang joran</h2>
+        <div class="joran">
+
+            <article>
+                <h3 style="font-size: x-large;">Joran tegek</h3><br>
+                <img src="images/joran tegek.jfif" alt="Joran tegek">
+                <p>Jadi joran ini lebih ke joran sehari-hari karna bisa digunakan di berbagai tempat seperti sungai, danau, bahkan air tawar.</p>
+            </article><br><br><hr><br>
+
+            <article>
+                <h3 style="font-size: x-large;">Joran reals</h3><br>
+                <img src="images/joran reels.jfif" alt="Joran reels">
+                <p>Jadi joran ini lebih ke joran laut atau bisa di sebut pancing laut. tapi bisa juga digunakan di
+                    sungai dan danau.</p>
+            </article><br><br><hr><br>
+
+            <div class="page-header">
+                <span class="page-tag">Tips from-roni.</span><br><br>
+                <p style="font-size: x-large;">Tips Memancing</p><br>
+                <p class="page-desc">Panduan sederhana buat kamu yang hobi mancing, dari pemula sampai mid aja.</p>
+            </div><br>
+
+            <div class="artikel-grid">
+                <article class="artikel-card">
+                    <div class="artikel-icon">🎣</div>
+                    <div class="artikel-body">
+                        <ul>
+                            <li><span class="artikel-tag">Pemula</span></li>
+                        </ul>
+                        <h3>Pilih Waktu yang Tepat</h3>
+                        <p>Waktu terbaik memancing adalah pagi hari pukul 05.00-08.00 dan sore hari pukul 16.00–18.00.</p>
+                    </div>
+                </article>
+
+                <article class="artikel-card">
+                    <div class="artikel-icon">🎣</div>
+                    <div class="artikel-body">
+                        <ul>
+                            <li><span class="artikel-tag">Mid</span></li>
+                        </ul>
+                        <h3>Pilih spot gacor</h3>
+                        <p>Jadi tips dari saya untuk memilih spot yang gacor adalah: pastikan spot tersebut memiliki
+                            banyak ikan, airnya jernih, dan tidak terlalu ramai.</p>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const sidebar = document.getElementById('sidebar');
+        const navOverlay = document.getElementById('navOverlay');
+
+        hamburgerBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+            navOverlay.classList.toggle('open');
+        });
+
+        navOverlay.addEventListener('click', () => {
+            sidebar.classList.remove('open');
+            navOverlay.classList.remove('open');
+        });
+
+        sidebar.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                sidebar.classList.remove('open');
+                navOverlay.classList.remove('open');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
